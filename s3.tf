@@ -11,5 +11,5 @@ module "distribution_bucket_policy" {
   version = "2.0.0"
   # insert the 2 required variables here
   bucket_name      = module.distribution_bucket.bucket_name
-  distribution_arn = ""
+  distribution_arn = aws_cloudfront_distribution.cloudfront_distribution.arn
 }
