@@ -5,10 +5,15 @@ variable "domain" {
   type        = string
 }
 
+variable "cache_policy_id" {
+  description = "Id of the cache policy to use for the distributions default cache policy."
+  type        = string
+}
+
 # OPTIONAL PARAMETERS
 # These parameters have reasonable defaults.
-# variable "deploy_wildcard_cert" {
-#   default     = false
-#   description = "Whether or not to deploy a wildard domain in the certificate."
-#   type        = bool
-# }
+variable "default_root_object" {
+  default     = "index.html"
+  description = "Object that you want CloudFront to return (for example, index.html) when an end user requests the root URL."
+  type        = string
+}
